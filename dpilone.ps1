@@ -40,6 +40,10 @@ else
     # do not add VCS infos unless told otherwise (LP_ENABLE_VCS_ROOT)
     [[ "$LP_ENABLE_VCS_ROOT" = "1" ]] && LP_PS1="${LP_PS1}${LP_VCS}"
 fi
+
+# Trim the leading whitespace since I want things to line up on the left edge.
+LP_MARK=${LP_MARK##*( )}
+
 # add return code and prompt mark
 LP_PS1="
 ${LP_PS1}${LP_ERR}
