@@ -42,7 +42,7 @@ else
 fi
 
 # Trim the leading whitespace since I want things to line up on the left edge.
-LP_MARK=${LP_MARK##*( )}
+LP_MARK=${LP_MARK## }
 
 # add return code and prompt mark
 LP_PS1="
